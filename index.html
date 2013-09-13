@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NodeJS + MongoDb Chat Sample</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <style>
+        body {
+            padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+        }
+    </style>
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="brand" href="#">NodeJS + MongoDb Chat Sample</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="container-fluid">
+            <div class="row-fluid">
+
+                <div id="users" class="span2 well"></div>
+
+                <div class="span10 well chat-room">
+
+                    <div id="messages" class="chat-overflow"></div>
+
+                    <hr/>
+
+                    <form id="chatForm" method="post">
+                        <div class="span8">
+                            <input id="chatMessage" class="span12" type="text" placeholder="Type your message">
+                        </div>
+                        <div class="span2">
+                            <input type="submit" value="Send" class="btn btn-success">
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="nickNameModal" class="modal hide fade" tabindex="-1" role="dialog">
+            <div class="modal-header">
+                <h3 id="myModalLabel">Enter your nickname</h3>
+            </div>
+            <div class="modal-body">
+                <form class="inline" id="nickNameForm">
+                    <input placeholder="nickname" id="nickname"/>
+                    <button type="submit" class="btn btn-primary">Join Chat</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <div class="text-left">
+                    See the source code of this project on
+                    <a href="http://github.com/rosantoz" target="_blank">
+                        GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="http://localhost:8088/socket.io/socket.io.js"></script>
+    <script src="node/client.js"></script>
+</body>
+</html>

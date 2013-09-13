@@ -1,0 +1,13 @@
+{
+    "name"        : "realtimeNodeMongoDbChatSample",
+    "version"     : "1.0.0",
+    "author"      : {
+        "name" : "Rodrigo dos Santos",
+        "email": "rodrigo@dossantos.com.au"
+    },
+    "dependencies": {
+        "express"  : "~3.3.8",
+        "mongoose" : "~3.6.19",
+        "socket.io": "~0.9.16"
+    }
+}

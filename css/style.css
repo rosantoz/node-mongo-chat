@@ -1,0 +1,8 @@
+.chat-room {
+    height: 320px;
+}
+
+.chat-room .chat-overflow {
+    height: 180px;
+    overflow: scroll;
+}
