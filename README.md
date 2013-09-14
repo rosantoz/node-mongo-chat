@@ -18,7 +18,7 @@ What I've used
 Demo
 =======================
 
-See a live demo of this app in <a href="http://nodechat.dossantos.com.au" target="_blank">http://nodechat.dossantos.com.au</a>.
+See a live demo of this app <a href="http://nodechat.dossantos.com.au" target="_blank">here</a>.
 
 Any feedback, question, contribution will be appreciated.
 
