@@ -13,7 +13,12 @@ What I've used
 * Twitter Bootstrap in the front end
 * Jquery to insert messages in the client-side.
 * NodeJS / Socket.io / Express to make real time updates
-* MongoDb to store the messages
+* MongoDb / Mongoose to store the messages
+
+Demo
+=======================
+
+See a live demo of this app in <a href="http://nodechat.dossantos.com.au" target="_blank">http://nodechat.dossantos.com.au</a>.
 
 Any feedback, question, contribution will be appreciated.
 
