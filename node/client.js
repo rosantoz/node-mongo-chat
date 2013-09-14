@@ -5,7 +5,7 @@ $(document).ready(function () {
     });
 });
 
-var socket = io.connect('http://localhost:8088');
+var socket = io.connect('http://nodechat.dossantos.com.au:8088');
 
 socket.on('connect', function (data) {
 
