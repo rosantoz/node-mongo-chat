@@ -8,7 +8,8 @@ var express = require('express')
 
 io.sockets.on('connection', function (client) {
 
-    messageModel.message.find().limit(10).sort({_id: 1}).exec(function (err, results) {
+    messageModel.message.find().limit(10).sort({_id: -1}).exec(function (err, results) {
+        results.reverse();
         results.forEach(function (message) {
             client.emit('addMessage', message.nickname, message);
         });
@@ -54,6 +55,16 @@ io.sockets.on('connection', function (client) {
             client.emit('removeUser', nickname);
         });
 
+    });
+
+    client.on('userEvent', function (message) {
+        messageModel.message.create({
+            nickname: '',
+            message : message.message,
+            date    : message.date
+        }, function (err, rs) {
+            console.log(err);
+        });
     });
 
 });
